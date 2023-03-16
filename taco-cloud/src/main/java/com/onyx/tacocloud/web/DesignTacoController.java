@@ -15,7 +15,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.onyx.tacocloud.Ingredient;
 import com.onyx.tacocloud.Ingredient.Type;
 import com.onyx.tacocloud.Taco;
 
