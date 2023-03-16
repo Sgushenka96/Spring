@@ -64,10 +64,10 @@ public class DesignTacoController {
 
     @PostMapping
     public String processTaco(@Valid Taco taco, Errors errors, @ModelAttribute TacoOrder tacoOrder) {
-        tacoOrder.addtaco(taco);
         if (errors.hasErrors()) {
             return "design";
         }
+        tacoOrder.addtaco(taco);
         log.info("Processing taco: {}", taco);
 
         return "redirect:/orders/current";
