@@ -2,6 +2,7 @@ package com.onyx.tacocloud.web;
 
 import com.onyx.tacocloud.Ingredient;
 import com.onyx.tacocloud.TacoOrder;
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -62,7 +63,7 @@ public class DesignTacoController {
     }
 
     @PostMapping
-    public String processTaco(Taco taco, Errors errors, @ModelAttribute TacoOrder tacoOrder) {
+    public String processTaco(@Valid Taco taco, Errors errors, @ModelAttribute TacoOrder tacoOrder) {
         tacoOrder.addtaco(taco);
         if (errors.hasErrors()) {
             return "design";
