@@ -1,2 +1,17 @@
-package com.onyx.tacocloud.data;public class IngredientRepository {
+package com.onyx.tacocloud.data;
+
+import com.onyx.tacocloud.Ingredient;
+
+import java.util.Optional;
+
+
+
+public interface IngredientRepository {
+
+    Iterable<Ingredient> findAll();
+
+    Optional<Ingredient> findById(String id);
+
+    Ingredient save(Ingredient ingredient);
+
 }
