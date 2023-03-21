@@ -1,4 +1,7 @@
 package com.onyx.tacocloud.data;
 
-public class OrderRepository {
+import com.onyx.tacocloud.TacoOrder;
+
+public interface OrderRepository {
+    TacoOrder save(TacoOrder order);
 }
